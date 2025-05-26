@@ -54,11 +54,15 @@ php-storage/
 
    Atau jika menggunakan Apache/Nginx, pastikan document root diarahkan ke folder `php-storage/`.
 
-4. **Pastikan folder upload dapat ditulisi:**
+   Atau tidak perlu melakukan cara diatas, artinya langsung menggunakan Web Browser dengan melakukan access ke http://localhost langsung.
+
+5. **Pastikan folder upload dapat ditulisi:**
 
    ```bash
    chmod -R 775 Uploads/BuktiTransfer/
    ```
+
+   *Seharusnya tidak perlu melakukan chmod karena sudah dilakukan configurasi sebelumnya.
 
 ---
 
