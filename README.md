@@ -1,24 +1,26 @@
 # PHP Storage
 
-PHP Storage adalah aplikasi sederhana berbasis PHP yang mengusung konsep arsitektur seperti MVC (Model-View-Controller), namun dengan pendekatan yang lebih ringan: **tidak menggunakan Model** sebagai pemroses data ke database. Semua proses pengolahan data ditangani langsung melalui Controller, sehingga memudahkan pemahaman dan pengembangan untuk proyek kecil atau skala personal.
+**PHP Storage** adalah aplikasi sederhana berbasis PHP yang mengusung konsep arsitektur seperti MVC (Model-View-Controller), namun dengan pendekatan yang lebih ringan: **tidak menggunakan Model** sebagai pemroses data ke database. Semua proses pengolahan data ditangani langsung melalui Controller, sehingga memudahkan pemahaman dan pengembangan untuk proyek kecil atau skala personal.
+
+---
 
 ## 🧱 Struktur Proyek
 
+```text
 php-storage/
-├── Config/ # Konfigurasi aplikasi (jika ada)
-├── Controllers/ # Berisi file controller untuk logika aplikasi
-├── Helpers/ # Fungsi-fungsi pembantu (utility functions)
-├── Public/ # Root direktori web, berisi aset statis
-│ └── Assets/ # CSS, JS, dan gambar
+├── Config/                 # Konfigurasi aplikasi (jika ada)
+├── Controllers/            # Berisi file controller untuk logika aplikasi
+├── Helpers/                # Fungsi-fungsi pembantu (utility functions)
+├── Public/                 # Root direktori web, berisi aset statis
+│   └── Assets/             # CSS, JS, dan gambar
 ├── Uploads/
-│ └── BuktiTransfer/ # Folder penyimpanan file upload
-├── Views/ # File tampilan (HTML + PHP)
-├── .htaccess # Konfigurasi Apache (mod_rewrite)
-└── index.php # Entry point aplikasi
+│   └── BuktiTransfer/      # Folder penyimpanan file upload
+├── Views/                  # File tampilan (HTML + PHP)
+├── .htaccess               # Konfigurasi Apache (mod_rewrite)
+└── index.php               # Entry point aplikasi
+```
 
-markdown
-Copy
-Edit
+---
 
 ## 🚀 Fitur
 
@@ -28,38 +30,50 @@ Edit
 - Mendukung upload file.
 - Aset statis dipisahkan di dalam folder `Public/Assets`.
 
+---
+
 ## 🛠️ Cara Menggunakan
 
 1. **Klon repositori ini** ke direktori lokal:
 
    ```bash
    git clone https://github.com/drchya/php-storage.git
-Buka folder project:
+   ```
 
-bash
-Copy
-Edit
-cd php-storage
-Jalankan di server lokal (misalnya dengan PHP built-in server):
+2. **Masuk ke folder proyek:**
 
-bash
-Copy
-Edit
-php -S localhost:8000
-Atau pastikan server Apache/Nginx kamu mengarah ke folder php-storage/.
+   ```bash
+   cd php-storage
+   ```
 
-Pastikan folder Uploads/BuktiTransfer/ dapat ditulisi:
+3. **Jalankan dengan PHP built-in server (untuk testing lokal):**
 
-bash
-Copy
-Edit
-chmod -R 775 Uploads/BuktiTransfer/
-💡 Catatan
-Aplikasi ini cocok untuk pembelajaran, percobaan, atau proyek kecil.
+   ```bash
+   php -S localhost:8000
+   ```
 
-Struktur kode bisa diperluas ke sistem MVC penuh jika dibutuhkan.
+   Atau jika menggunakan Apache/Nginx, pastikan document root diarahkan ke folder `php-storage/`.
 
-Tidak disarankan untuk produksi skala besar tanpa refactor ke sistem yang lebih terstruktur.
+4. **Pastikan folder upload dapat ditulisi:**
 
-📄 Lisensi
-Proyek ini menggunakan lisensi MIT.
+   ```bash
+   chmod -R 775 Uploads/BuktiTransfer/
+   ```
+
+---
+
+## 💡 Catatan
+
+- Aplikasi ini cocok untuk pembelajaran, percobaan, atau proyek kecil.
+- Struktur kode bisa dikembangkan lebih lanjut ke pola MVC penuh jika dibutuhkan.
+- Tidak disarankan untuk penggunaan skala besar tanpa refactor yang lebih mendalam.
+
+---
+
+## 📄 Lisensi
+
+Proyek ini menggunakan lisensi [MIT](LICENSE).
+
+---
+
+> Dibuat oleh [@drchya](https://github.com/drchya) — feel free to fork, modify, and contribute!
